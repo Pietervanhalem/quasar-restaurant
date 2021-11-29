@@ -1,0 +1,24 @@
+{
+  "vetur.format.defaultFormatterOptions": {
+    "prettier": {
+      "semi": false,
+      "singleQuote": true,
+      "attributeSeparator": false,
+      "closingBracketPosition": "new-line"
+    }
+  },
+  "vetur.format.defaultFormatter.js": "none",
+  "eslint.enable": true,
+  "eslint.run": "onType",
+  "eslint.options": {
+    "extensions": [
+      ".js",
+      ".vue"
+    ]
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "javascript.format.enable": false,
+  "files.eol": "\n"
+}
