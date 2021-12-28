@@ -5,10 +5,14 @@ const DEFAULT_STATE = [
   {
     id: '33843b38-1ecc-4df1-b484-187b9b5922f0',
     name: 'restaurant1',
+    lat: 2,
+    lon: 2,
   },
   {
     id: '58237db4-55c9-4e10-ad90-d7cf0f5333bf',
     name: 'restaurant2',
+    lat: 1,
+    lon: 2,
   },
 ]
 

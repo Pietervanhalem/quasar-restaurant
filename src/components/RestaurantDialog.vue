@@ -15,6 +15,20 @@
           label='name'
           :rules='[requiredValidator, uniqueValidator]'
         />
+         <q-input
+          v-model='restaurant.lat'
+          label='Lat'
+          type='number'
+          :step='0.01'
+          :rules='[requiredValidator, rangeValidator]'
+        />
+         <q-input
+          v-model='restaurant.lon'
+          label='Lon'
+          type='number'
+          :step='0.01'
+          :rules='[requiredValidator, rangeValidator]'
+        />
       </q-card-section>
 
       <q-card-actions class='float-right'>
@@ -92,8 +106,17 @@ export default defineComponent({
     },
 
     uniqueValidator(name) {
-      if (this.restaurants.map(e => e.name).includes(name)) {
+      if (this.restaurants.filter(e => e.id !== this.isNew || this.restaurant.id !== e.id).map(e => e.name).includes(name)) {
         return 'The restaurant name should be unique'
+      }
+      return true
+    },
+    rangeValidator(val) {
+      if (Number.isNaN(val)) {
+        return 'This value is required.'
+      }
+      if (val < 0 || val > 360) {
+        return 'The value should be between 0 and 360.'
       }
       return true
     },
