@@ -26,6 +26,7 @@
         @click='openRestaurantDialog'
       />
     </div>
+    <map-component/>
     <restaurant-dialog ref='restaurant-dialog' />
     <rating-dialog ref='rating-dialog' />
   </q-page>
@@ -38,6 +39,7 @@ import { mapGetters } from 'vuex'
 import RestaurantCard from '../components/RestaurantCard.vue'
 import RestaurantDialog from '../components/RestaurantDialog.vue'
 import RatingDialog from '../components/RatingDialog.vue'
+import MapComponent from '../components/MapComponent.vue'
 
 export default defineComponent({
 
@@ -47,6 +49,7 @@ export default defineComponent({
     RestaurantCard,
     RestaurantDialog,
     RatingDialog,
+    MapComponent,
   },
 
   computed: {

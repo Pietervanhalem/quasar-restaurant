@@ -45,7 +45,9 @@ export default defineComponent({
 
   name: 'PageRestaurant',
 
-  components: { RatingCard, RatingDialog, RestaurantDialog },
+  components: {
+    RatingCard, RatingDialog, RestaurantDialog,
+  },
 
   computed: {
     ...mapGetters({
